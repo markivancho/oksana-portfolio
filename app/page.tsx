@@ -10,7 +10,7 @@ export default function CoachPortfolio() {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-blue-600">Jane Doe</h1>
+          <h1 className="text-2xl font-bold text-blue-600">Oksana Semeniv</h1>
           <nav>
             <ul className="flex space-x-4">
               <li><a href="#about" className="hover:text-blue-600">About</a></li>
@@ -40,7 +40,7 @@ export default function CoachPortfolio() {
           <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-8 md:mb-0">
-              <img src="/placeholder.svg?height=400&width=400" alt="Jane Doe" className="rounded-full mx-auto" width={300} height={300} />
+              <img src="/placeholder.svg?height=400&width=400" alt="Oksana Semeniv" className="rounded-full mx-auto" width={300} height={300} />
             </div>
             <div className="md:w-1/2">
               <p className="text-lg mb-4">
@@ -155,7 +155,7 @@ export default function CoachPortfolio() {
               </Link>
             </div>
             <Button className="w-full" asChild>
-              <a href="mailto:jane@example.com">
+              <a href="mailto:oksano4ka14@gmail.com">
                 <MailIcon className="mr-2 h-4 w-4" /> Email Me
               </a>
             </Button>

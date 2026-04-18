@@ -1,35 +1,33 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import { ThemeProvider } from "@/components/portfolio/ThemeProvider"
+import { PerspectiveProvider } from "@/components/portfolio/PerspectiveProvider"
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
-  title: "Oksana Semeniv - Coaching",
-  description: "Empowering individuals and organizations through coaching",
-};
+  title: "Oksana Semeniv — Human Capital Architect",
+  description:
+    "Oksana Semeniv: Strategic HR Business Partner and Executive Coach. Scaling organizations by unlocking individual potential.",
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} font-sans antialiased bg-sand-50 text-navy-950 dark:bg-navy-950 dark:text-sand-50`}
       >
-        {children}
+        <ThemeProvider>
+          <PerspectiveProvider>{children}</PerspectiveProvider>
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
